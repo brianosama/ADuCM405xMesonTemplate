@@ -1,0 +1,3 @@
+[submodule "ADuCM405x_DFP"]
+	path = ADuCM405x_DFP
+	url = https://github.com/brianosama/ADuCM405x_DFP.git
