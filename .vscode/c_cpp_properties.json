@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/ADuCM405x_DFP/**",
+                "/usr/lib/arm-none-eabi/include/**",
+                "/usr/lib/gcc/arm-none-eabi/6.3.1/include"
+            ],
+            "defines": [
+                "__ADUCM4050__"
+            ],
+            "compilerPath": "",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}"
+        }
+    ],
+    "version": 4
+}
