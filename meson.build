@@ -54,6 +54,9 @@ link_args += '-Wl,-Map,output.map'
 # setup linker dependencies
 
 link_deps +=  meson.get_compiler('c').find_library('/usr/lib/gcc/arm-none-eabi/6.3.1/thumb/@0@/libgcc'.format(arch))
+link_deps +=  meson.get_compiler('c').find_library('/usr/lib/arm-none-eabi/lib/libc_nano')
+link_deps +=  meson.get_compiler('c').find_library('/usr/lib/arm-none-eabi/lib/libnosys')
+link_deps +=  meson.get_compiler('c').find_library('/usr/lib/arm-none-eabi/lib/libm')
 
 main = executable(
             'main',
@@ -106,7 +109,7 @@ maindump = custom_target(
         depends          : [main])
 
 run_target('gdb',
-         command : [terminal, '-e', 'gdb-multiarch', '-q', '@0@/main.elf'.format(meson.current_build_dir())])
+        command : [terminal, '-e', 'gdb-multiarch', '-q', '@0@/main.elf'.format(meson.current_build_dir())])
 
 
 
